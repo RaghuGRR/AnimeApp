@@ -6,6 +6,7 @@ OverView:
   - navigation component is used with the safe args to tranfer data between two fragments
   - used uiState for the ui responsiveness
   - liveData,coroutines,mvvm architecture
+    
 Limitations:
   - the api response doesnt contain the main cast to show them
   - the video player is of webview in which all the links are given of youtube is the best way todo in short time

@@ -3,11 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AnimeListFragment">
+    tools:context=".animeList.AnimeListFragment">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvAnimeList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:listitem="@layout/anime_list_item"/>
+    <ProgressBar
+        android:id="@+id/loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:indeterminate="true"/>
+
+
 </FrameLayout>

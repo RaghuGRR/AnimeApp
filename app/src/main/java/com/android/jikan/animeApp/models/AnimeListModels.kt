@@ -1,4 +1,4 @@
-package com.android.jikan.animeApp
+package com.android.jikan.animeApp.models
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

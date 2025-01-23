@@ -1,9 +1,10 @@
-package com.android.jikan.animeApp
+package com.android.jikan.animeApp.helpers
 
 
 import android.graphics.drawable.Drawable
 import android.widget.ImageView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
+import com.android.jikan.animeApp.R
 import com.bumptech.glide.Glide
 import com.bumptech.glide.RequestBuilder
 import com.bumptech.glide.load.engine.DiskCacheStrategy

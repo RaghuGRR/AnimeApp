@@ -1,4 +1,4 @@
-package com.android.jikan.animeApp
+package com.android.jikan.animeApp.animeList
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle
@@ -8,6 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.android.jikan.animeApp.models.AnimeListData
+import com.android.jikan.animeApp.models.AnimeListResponse
+import com.android.jikan.animeApp.helpers.UiState
 import com.android.jikan.animeApp.databinding.FragmentAnimeListBinding
 
 class AnimeListFragment : Fragment() {
@@ -30,7 +33,7 @@ class AnimeListFragment : Fragment() {
         viewModel.getAnimeList()
         binding.rvAnimeList.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
         val animeList = ArrayList<AnimeListData>()
-        val clickListener = object : ClickListener{
+        val clickListener = object : ClickListener {
             override fun onClick(position: Int, data: AnimeListData) {
                 val action = AnimeListFragmentDirections.actionAnimeListFragmentToAnimeDetailFragment(
                     data
@@ -43,8 +46,11 @@ class AnimeListFragment : Fragment() {
             when(response){
                 is UiState.Error -> {}
                 UiState.Idle -> {}
-                UiState.Loading -> {}
+                UiState.Loading -> {
+                    binding.loader.visibility = View.VISIBLE
+                }
                 is UiState.Success<*> -> {
+                    binding.loader.visibility = View.GONE
                     val resp = response.result as AnimeListResponse
                     (binding.rvAnimeList.adapter as AnimeListAdapter).updateAnimeList(resp.data)
                 }

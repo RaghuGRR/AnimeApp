@@ -1,4 +1,4 @@
-package com.android.jikan.animeApp
+package com.android.jikan.animeApp.networking
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

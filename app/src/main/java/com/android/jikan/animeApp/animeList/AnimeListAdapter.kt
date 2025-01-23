@@ -1,12 +1,14 @@
-package com.android.jikan.animeApp
+package com.android.jikan.animeApp.animeList
 
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.android.jikan.animeApp.databinding.AnimeListItemBinding
+import com.android.jikan.animeApp.helpers.loadImage
+import com.android.jikan.animeApp.models.AnimeListData
 
-class AnimeListAdapter(private val animeList: ArrayList<AnimeListData>,val clickListener: ClickListener) : RecyclerView.Adapter<AnimeListAdapter.ViewHolder>() {
+class AnimeListAdapter(private val animeList: ArrayList<AnimeListData>, val clickListener: ClickListener) : RecyclerView.Adapter<AnimeListAdapter.ViewHolder>() {
     inner class ViewHolder(itemBinding:AnimeListItemBinding) : RecyclerView.ViewHolder(itemBinding.root){
         var ivAnimeImage = itemBinding.ivAnimeImage
         var tvAnimeTitle = itemBinding.tvAnimeTitle

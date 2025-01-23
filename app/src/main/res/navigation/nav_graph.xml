@@ -6,7 +6,7 @@
     app:startDestination="@id/animeListFragment">
     <fragment
         android:id="@+id/animeListFragment"
-        android:name="com.android.jikan.animeApp.AnimeListFragment"
+        android:name="com.android.jikan.animeApp.animeList.AnimeListFragment"
         android:label="fragment_anime_list"
         tools:layout="@layout/fragment_anime_list" >
         <action
@@ -14,16 +14,16 @@
             app:destination="@id/animeDetailFragment" >
             <argument
                 android:name="animeData"
-                app:argType="com.android.jikan.animeApp.AnimeListData" />
+                app:argType="com.android.jikan.animeApp.models.AnimeListData" />
         </action>
     </fragment>
     <fragment
         android:id="@+id/animeDetailFragment"
-        android:name="com.android.jikan.animeApp.AnimeDetailFragment"
+        android:name="com.android.jikan.animeApp.animeDetail.AnimeDetailFragment"
         android:label="fragment_anime_detail"
         tools:layout="@layout/fragment_anime_detail" >
         <argument
             android:name="animeData"
-            app:argType="com.android.jikan.animeApp.AnimeListData" />
+            app:argType="com.android.jikan.animeApp.models.AnimeListData" />
     </fragment>
 </navigation>

@@ -54,8 +54,6 @@ dependencies {
     implementation (libs.androidx.navigation.ui)
     implementation(libs.glide)
     implementation(libs.kotlinx.coroutines.android)
-    implementation(libs.google.youtube.android.player.api)
-    implementation(libs.ui)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.androidx.swiperefreshlayout)

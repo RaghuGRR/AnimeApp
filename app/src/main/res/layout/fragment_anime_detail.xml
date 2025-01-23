@@ -8,7 +8,7 @@
     android:layout_marginBottom="20dp"
     android:layout_marginStart="15dp"
     android:layout_marginEnd="15dp"
-    tools:context=".AnimeDetailFragment">
+    tools:context=".animeDetail.AnimeDetailFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -38,6 +38,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvAnimeTitleDetail">
 
+                <WebView
+                    android:id="@+id/exoPlayerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
 
                 <ImageView
                     android:id="@+id/trailerImage"

@@ -1,9 +1,11 @@
-package com.android.jikan.animeApp
+package com.android.jikan.animeApp.animeList
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.android.jikan.animeApp.networking.GetAnimeListRepository
+import com.android.jikan.animeApp.helpers.UiState
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

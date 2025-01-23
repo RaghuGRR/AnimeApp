@@ -1,4 +1,4 @@
-package com.android.jikan.animeApp
+package com.android.jikan.animeApp.helpers
 
 sealed class UiState {
     data object Idle : UiState()

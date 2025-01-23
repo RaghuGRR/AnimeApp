@@ -1,5 +1,6 @@
-package com.android.jikan.animeApp
+package com.android.jikan.animeApp.networking
 
+import com.android.jikan.animeApp.models.AnimeListResponse
 import retrofit2.Response
 import retrofit2.http.GET
 
